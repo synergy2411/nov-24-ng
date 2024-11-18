@@ -70,3 +70,11 @@ v2 -> v3
 - ng new frontend-app
 - cd frontend-app
 - npm start
+
+# CLI Commands
+- ng generate component users
+- ng g c users
+- ng g d directive-name
+- ng g p pipe-name
+- ng g s service-name
+- ng g m module-name
