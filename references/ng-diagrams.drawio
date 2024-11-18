@@ -1,0 +1,52 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="24.8.4">
+  <diagram id="jZSDmPX3x27YHH8VdK8n" name="Page-5">
+    <mxGraphModel dx="607" dy="366" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="qr8IekC-ziWlrELF0gwB-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="qr8IekC-ziWlrELF0gwB-1" target="qr8IekC-ziWlrELF0gwB-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qr8IekC-ziWlrELF0gwB-1" value="npm start / ng serve" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="110" y="155" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qr8IekC-ziWlrELF0gwB-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="qr8IekC-ziWlrELF0gwB-2" target="qr8IekC-ziWlrELF0gwB-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qr8IekC-ziWlrELF0gwB-2" value="WebpackDev&lt;div&gt;Server: 4200&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="340" y="150" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="qr8IekC-ziWlrELF0gwB-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="qr8IekC-ziWlrELF0gwB-4" target="qr8IekC-ziWlrELF0gwB-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qr8IekC-ziWlrELF0gwB-4" value="src/Index.html" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="505" y="155" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qr8IekC-ziWlrELF0gwB-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="qr8IekC-ziWlrELF0gwB-6" target="qr8IekC-ziWlrELF0gwB-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qr8IekC-ziWlrELF0gwB-6" value="src/main.ts" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="515" y="265" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qr8IekC-ziWlrELF0gwB-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="qr8IekC-ziWlrELF0gwB-8" target="qr8IekC-ziWlrELF0gwB-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qr8IekC-ziWlrELF0gwB-8" value="src/app/app.module.ts" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="325" y="265" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qr8IekC-ziWlrELF0gwB-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="qr8IekC-ziWlrELF0gwB-10" target="qr8IekC-ziWlrELF0gwB-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qr8IekC-ziWlrELF0gwB-10" value="src/app/app.component.ts" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="95" y="265" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qr8IekC-ziWlrELF0gwB-12" value="src/app/app.component.html" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="90" y="375" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qr8IekC-ziWlrELF0gwB-14" value="Angular Bootstrap Process" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="310" y="90" width="100" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -49,3 +49,24 @@ v2 -> v3
 
 - Creation Phase : allocate the memory (Function declaration)
 - Execution Phase :executes the code (function Expression)
+
+# JavaScript DataTypes-
+
+- Primitive : String, Number, Boolean, undefined, null
+- Reference : Date, Array, Objects, Functions
+- void
+- any
+- enum
+- never
+- unknown
+- tuple
+
+---
+
+# Angular CLI Tool (ng)
+
+- npm install @angular/cli@14 -g
+- ng version
+- ng new frontend-app
+- cd frontend-app
+- npm start

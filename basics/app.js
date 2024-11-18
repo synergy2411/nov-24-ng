@@ -144,3 +144,19 @@
 // console.log(user.name); // "Jenny"
 
 // user = { name: "Jack" }; // ERROR
+
+// class Animal {
+//   constructor(legs, species) {
+//     this.legs = legs;
+//     this.species = species;
+//   }
+
+//   getDetails() {
+//     return `${this.species} does have ${this.legs} legs!`;
+//   }
+// }
+
+// let tiger = new Animal(4, "Cat");
+// console.log(tiger.getDetails());
+
+console.log("10" === 10);
