@@ -46,3 +46,6 @@ SemVer : X.Y.Z
 
 v2 -> v3
 2.0.0 -> 3.0.0
+
+- Creation Phase : allocate the memory (Function declaration)
+- Execution Phase :executes the code (function Expression)
