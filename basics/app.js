@@ -160,3 +160,5 @@
 // console.log(tiger.getDetails());
 
 console.log("10" === 10);
+
+console.log("Guden Morgan");

@@ -72,9 +72,26 @@ v2 -> v3
 - npm start
 
 # CLI Commands
+
 - ng generate component users
 - ng g c users
 - ng g d directive-name
 - ng g p pipe-name
 - ng g s service-name
 - ng g m module-name
+
+---
+
+# Day 02
+
+## Plugins / Extensions for VS Code
+
+- Angular Language Service
+- Prettier Code Formatter
+- Bootstrap 5 Quick Snippets
+
+## Adding Bootstrap support
+
+> npm install bootstrap
+
+- update "styles" in angular.json file with "./node_modules/bootstrap/dist/css/bootstrap.min.css"
