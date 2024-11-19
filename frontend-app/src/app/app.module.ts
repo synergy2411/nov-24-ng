@@ -4,12 +4,16 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users.component';
+import { UserInfoComponent } from './users/user-info/user-info.component';
+import { UserImageComponent } from './users/user-image/user-image.component';
 
 @NgModule({
   declarations: [
     // Component, directives, Pipes
     AppComponent,
     UsersComponent,
+    UserInfoComponent,
+    UserImageComponent,
   ],
   imports: [
     // Modules

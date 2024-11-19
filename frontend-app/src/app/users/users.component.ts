@@ -17,9 +17,15 @@ export class UsersComponent {
     votes: 120,
   };
 
+  childValue = '';
+
   onMoreInfo(item: any) {
     alert(
       `Mr. ${item.lastName.toUpperCase()} is working with ${item.company}!`
     );
+  }
+
+  onChildInput(value: string) {
+    this.childValue = value;
   }
 }

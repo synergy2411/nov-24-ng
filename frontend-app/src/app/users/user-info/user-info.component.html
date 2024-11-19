@@ -1,0 +1,15 @@
+<ng-content></ng-content>
+
+<p>Date of Birth : <span [innerText]="user.dob"></span></p>
+
+<p>Income : {{ user.income }}</p>
+
+<p>Total Votes : {{ user.votes }}</p>
+
+<!-- <ng-content></ng-content> -->
+
+<input type="number" [(ngModel)]="user.votes" />
+
+<input type="text" (keyup)="onKeyUp(inputDemo.value)" #inputDemo />
+
+<!-- <ng-content select="footer"></ng-content> -->

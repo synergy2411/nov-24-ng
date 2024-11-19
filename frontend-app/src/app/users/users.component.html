@@ -1,27 +1,18 @@
+<h1>Child Value : {{ childValue }}</h1>
+
 <ul class="list-unstyled">
   <li>
     <div class="row">
       <div class="col-4 text-center">
-        <img
-          [src]="user.avatar"
-          [alt]="user.avatar"
-          class="img-fluid rounded-circle mb-3"
-        />
-
-        <button class="btn btn-info" (click)="onMoreInfo(user)">
-          More Info
-        </button>
+        <app-user-image
+          [user]="user"
+          (childEvent)="onMoreInfo($event)"
+        ></app-user-image>
       </div>
       <div class="col-8">
-        <h1>{{ user.firstName }} {{ user.lastName }}</h1>
-
-        <p>Date of Birth : <span [innerText]="user.dob"></span></p>
-
-        <p>Income : {{ user.income }}</p>
-
-        <p>Total Votes : {{ user.votes }}</p>
-
-        <input type="number" [(ngModel)]="user.votes" />
+        <app-user-info [user]="user" (onChildEvent)="onChildInput($event)">
+          <h1>{{ user.firstName }} {{ user.lastName }}</h1>
+        </app-user-info>
       </div>
     </div>
   </li>
