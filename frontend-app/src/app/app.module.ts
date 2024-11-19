@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users.component';
 import { UserInfoComponent } from './users/user-info/user-info.component';
 import { UserImageComponent } from './users/user-image/user-image.component';
+import { LifeCycleComponent } from './components/demo/life-cycle/life-cycle.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { UserImageComponent } from './users/user-image/user-image.component';
     UsersComponent,
     UserInfoComponent,
     UserImageComponent,
+    LifeCycleComponent,
   ],
   imports: [
     // Modules

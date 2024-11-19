@@ -1,25 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { USER_DATA } from '../model/mocks';
+import { IUser } from '../model/user';
 
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
   styleUrls: ['./users.component.css'],
 })
-export class UsersComponent {
-  user = {
-    firstName: 'bill',
-    lastName: 'gates',
-    company: 'Microsoft',
-    isWorking: true,
-    dob: new Date('Jan 12, 1965'),
-    income: 50000,
-    avatar: './assets/avatars/bill.jpg',
-    votes: 120,
-  };
+export class UsersComponent implements OnInit {
+  user!: IUser;
+
+  constructor() {}
+
+  ngOnInit(): void {
+    this.user = USER_DATA;
+  }
 
   childValue = '';
 
-  onMoreInfo(item: any) {
+  onMoreInfo(item: IUser) {
     alert(
       `Mr. ${item.lastName.toUpperCase()} is working with ${item.company}!`
     );
