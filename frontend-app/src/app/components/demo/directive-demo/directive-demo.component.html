@@ -1,0 +1,100 @@
+<h1
+  [ngStyle]="dynamicStyles"
+  (mouseenter)="onChangeTheme()"
+  (mouseleave)="onRestoreTheme()"
+>
+  Directive (ngStyle) Demo
+</h1>
+
+<!-- <h1 [ngClass]="['my-border', 'my-feature']">Directive (ngClass) Demo</h1> -->
+<h1
+  [ngClass]="dynamicClasses"
+  (mouseenter)="onToggleClasses()"
+  (mouseleave)="onToggleClasses()"
+>
+  Directive (ngClass) Demo
+</h1>
+
+<hr />
+
+<h1>Structural Directive Demo</h1>
+
+<button class="btn btn-primary" (click)="isAdmin = !isAdmin">
+  Toggle Admin
+</button>
+
+<h2 *ngIf="isAdmin; else elseTemplate">If Demo</h2>
+
+<ng-template #elseTemplate>
+  <p>The Else Template Demo</p>
+</ng-template>
+
+<ul>
+  <li
+    *ngFor="
+      let friend of friends;
+      index as i;
+      first as isFirst;
+      last as isLast;
+      even as isEven;
+      odd as isOdd
+    "
+  >
+    <p>{{ i + 1 }} -{{ friend }}</p>
+    <p>Is this first Element ? : {{ isFirst }}</p>
+    <p>Is this last Element ? : {{ isLast }}</p>
+    <p>Is this even Element ? : {{ isEven }}</p>
+    <p>Is this odd Element ? : {{ isOdd }}</p>
+  </li>
+</ul>
+
+<table class="table">
+  <thead>
+    <th>Index</th>
+    <th>Name</th>
+    <th>Even</th>
+    <th>Odd</th>
+    <th>First</th>
+    <th>Last</th>
+  </thead>
+  <tbody>
+    <tr
+      *ngFor="
+        let friend of friends;
+        index as i;
+        first as isFirst;
+        last as isLast;
+        even as isEven;
+        odd as isOdd
+      "
+    >
+      <td>{{ i }}</td>
+      <td>{{ friend }}</td>
+      <td>{{ isEven }}</td>
+      <td>{{ isOdd }}</td>
+      <td>{{ isFirst }}</td>
+      <td>{{ isLast }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<br />
+
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <button class="nav-link" (click)="tab = 1">Tab 1</button>
+  </li>
+  <li class="nav-item">
+    <button class="nav-link" (click)="tab = 2">Tab 2</button>
+  </li>
+  <li class="nav-item">
+    <button class="nav-link" (click)="tab = 3">Tab 3</button>
+  </li>
+</ul>
+
+<div [ngSwitch]="tab">
+  <div *ngSwitchCase="1">Output 1</div>
+  <div *ngSwitchCase="2">Output 2</div>
+  <div *ngSwitchCase="3">Output 3</div>
+  <div *ngSwitchDefault>Default Output</div>
+</div>
