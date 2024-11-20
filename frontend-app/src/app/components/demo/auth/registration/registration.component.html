@@ -17,6 +17,17 @@
               [formControl]="username"
             />
             <label for="email">Email</label>
+
+            <div *ngIf="username.touched && username.invalid">
+              <div *ngIf="username.hasError('required')">
+                <p class="alert alert-danger">Username is mandatory field.</p>
+              </div>
+              <div *ngIf="username.hasError('email')">
+                <p class="alert alert-danger">
+                  Username should be in email format.
+                </p>
+              </div>
+            </div>
           </div>
 
           <!-- password -->
@@ -31,6 +42,22 @@
               [formControl]="password"
             />
             <label for="password">password</label>
+
+            <div *ngIf="password.touched && password.invalid">
+              <div *ngIf="password.hasError('required')">
+                <p class="alert alert-danger">Password is mandatory field</p>
+              </div>
+              <div *ngIf="password.hasError('minlength')">
+                <p class="alert alert-danger">
+                  Password must have 6 characters
+                </p>
+              </div>
+              <div *ngIf="password.hasError('hasExclError')">
+                <p class="alert alert-danger">
+                  Password must have exclamation sign(!).
+                </p>
+              </div>
+            </div>
           </div>
 
           <!-- buttons -->

@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {
+  AbstractControl,
   FormBuilder,
   FormControl,
   FormGroup,
+  ValidationErrors,
   Validators,
 } from '@angular/forms';
 
@@ -16,6 +18,7 @@ export class RegistrationComponent implements OnInit {
   password = new FormControl('', [
     Validators.required,
     Validators.minLength(6),
+    this.hasExclamationMark,
   ]);
 
   registrationForm!: FormGroup;
@@ -30,6 +33,11 @@ export class RegistrationComponent implements OnInit {
   ngOnInit(): void {}
 
   onSubmit() {
-    console.log(this.registrationForm);
+    console.log(this.registrationForm.value);
+  }
+
+  hasExclamationMark(control: AbstractControl): ValidationErrors | null {
+    const position = control.value.indexOf('!');
+    return position >= 0 ? null : { hasExclError: true };
   }
 }
