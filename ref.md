@@ -95,3 +95,7 @@ v2 -> v3
 > npm install bootstrap
 
 - update "styles" in angular.json file with "./node_modules/bootstrap/dist/css/bootstrap.min.css"
+
+# Pure Change / Impure Change
+
+- Immutable Change are Pure

@@ -18,4 +18,4 @@ export class CountryCodePipe implements PipeTransform {
   }
 }
 
-// value.split("").reverse().join();
+// "Hello".split("").reverse().join("")

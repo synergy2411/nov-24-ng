@@ -6,6 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pipe-demo.component.css'],
 })
 export class PipeDemoComponent implements OnInit {
+  todoCollection = [
+    { label: 'pot the plants', status: 'pending' },
+    { label: 'buy new jeans', status: 'completed' },
+    { label: 'go for shopping', status: 'pending' },
+    { label: 'renew car insurance', status: 'completed' },
+  ];
+
+  filteredValue = '';
+
   testString = '9876543210';
 
   isLoading = false;
@@ -21,4 +30,10 @@ export class PipeDemoComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  addItem() {
+    this.todoCollection.push({ label: 'New Todo Item', status: 'pending' }); // Impure Change
+
+    // this.todoCollection = [{}]    // Pure Change
+  }
 }
