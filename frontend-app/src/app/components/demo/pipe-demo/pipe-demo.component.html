@@ -1,0 +1,4 @@
+<h1>The Pipe Demo Component</h1>
+
+<h3 *ngIf="isLoading">Loading...</h3>
+<h3 *ngIf="!isLoading">Promise Data : {{ promise | async }}</h3>

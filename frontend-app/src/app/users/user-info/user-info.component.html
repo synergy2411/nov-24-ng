@@ -1,10 +1,18 @@
-<ng-content></ng-content>
+<!-- <ng-content></ng-content> -->
 
-<p>Date of Birth : <span [innerText]="user.dob"></span></p>
+<!-- {{ user | json }} -->
 
-<p *ngIf="user.isWorking; else elseTemplte">Income : {{ user.income }}</p>
+<h1>{{ user.firstName | titlecase }} {{ user.lastName | titlecase }}</h1>
 
-<p>Total Votes : {{ user.votes }}</p>
+<p>
+  Date of Birth : <span [innerText]="user.dob | date : 'dd/MM/yyyy'"></span>
+</p>
+
+<p *ngIf="user.isWorking; else elseTemplte">
+  Income : {{ user.income | currency : "INR" }}
+</p>
+
+<p>Total Votes : {{ user.votes | number }}</p>
 
 <!-- <ng-content></ng-content> -->
 
@@ -15,5 +23,5 @@
 <!-- <ng-content select="footer"></ng-content> -->
 
 <ng-template #elseTemplte>
-  <p>Mr. {{ user.lastName }} is NOT working now!</p>
+  <p>Mr. {{ user.lastName | titlecase }} is NOT working now!</p>
 </ng-template>
