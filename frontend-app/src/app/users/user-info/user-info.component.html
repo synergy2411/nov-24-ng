@@ -2,7 +2,7 @@
 
 <p>Date of Birth : <span [innerText]="user.dob"></span></p>
 
-<p>Income : {{ user.income }}</p>
+<p *ngIf="user.isWorking; else elseTemplte">Income : {{ user.income }}</p>
 
 <p>Total Votes : {{ user.votes }}</p>
 
@@ -13,3 +13,7 @@
 <input type="text" (keyup)="onKeyUp(inputDemo.value)" #inputDemo />
 
 <!-- <ng-content select="footer"></ng-content> -->
+
+<ng-template #elseTemplte>
+  <p>Mr. {{ user.lastName }} is NOT working now!</p>
+</ng-template>
