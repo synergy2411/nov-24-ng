@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pipe-demo.component.css'],
 })
 export class PipeDemoComponent implements OnInit {
+  testString = '9876543210';
+
   isLoading = false;
 
   promise = new Promise((resolve) => {

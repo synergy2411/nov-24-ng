@@ -10,6 +10,7 @@ import { LifeCycleComponent } from './components/demo/life-cycle/life-cycle.comp
 import { DirectiveDemoComponent } from './components/demo/directive-demo/directive-demo.component';
 import { HighlightDirective } from './directives/highlight.directive';
 import { PipeDemoComponent } from './components/demo/pipe-demo/pipe-demo.component';
+import { CountryCodePipe } from './pipes/country-code.pipe';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { PipeDemoComponent } from './components/demo/pipe-demo/pipe-demo.compone
     DirectiveDemoComponent,
     HighlightDirective,
     PipeDemoComponent,
+    CountryCodePipe,
   ],
   imports: [
     // Modules
