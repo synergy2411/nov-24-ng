@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users.component';
@@ -13,6 +13,7 @@ import { PipeDemoComponent } from './components/demo/pipe-demo/pipe-demo.compone
 import { CountryCodePipe } from './pipes/country-code.pipe';
 import { FilterPipe } from './pipes/filter.pipe';
 import { LoginComponent } from './components/demo/auth/login/login.component';
+import { RegistrationComponent } from './components/demo/auth/registration/registration.component';
 
 @NgModule({
   declarations: [
@@ -28,11 +29,13 @@ import { LoginComponent } from './components/demo/auth/login/login.component';
     CountryCodePipe,
     FilterPipe,
     LoginComponent,
+    RegistrationComponent,
   ],
   imports: [
     // Modules
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [], // Services
   bootstrap: [AppComponent],
