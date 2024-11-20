@@ -1,7 +1,12 @@
-<h1>Child Value : {{ childValue }}</h1>
+<!-- <h1>Child Value : {{ childValue }}</h1> -->
 
 <ul class="list-unstyled list-group">
-  <li *ngFor="let user of users" class="list-group-item mb-3">
+  <li
+    appHighlight
+    [favColor]="'lightgrey'"
+    *ngFor="let user of users"
+    class="list-group-item mb-4"
+  >
     <div class="row">
       <div class="col-4 text-center">
         <app-user-image
