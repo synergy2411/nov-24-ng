@@ -20,6 +20,7 @@ export class RegistrationComponent implements OnInit {
     Validators.minLength(6),
     this.hasExclamationMark,
   ]);
+  cnfPassword = new FormControl('', this.passwordMismatch);
 
   registrationForm!: FormGroup;
 
@@ -27,6 +28,7 @@ export class RegistrationComponent implements OnInit {
     this.registrationForm = this.fb.group({
       uname: this.username,
       pwd: this.password,
+      cnfPassword: this.cnfPassword,
     });
   }
 
@@ -39,5 +41,16 @@ export class RegistrationComponent implements OnInit {
   hasExclamationMark(control: AbstractControl): ValidationErrors | null {
     const position = control.value.indexOf('!');
     return position >= 0 ? null : { hasExclError: true };
+  }
+
+  passwordMismatch(control: AbstractControl) {
+    if (control.root && control.root.value) {
+      if (control.value === control.root.value.pwd) {
+        return null;
+      } else {
+        return { passwordMismatch: true };
+      }
+    }
+    return null;
   }
 }

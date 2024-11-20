@@ -60,6 +60,27 @@
             </div>
           </div>
 
+          <!-- confirm password -->
+
+          <div class="form-floating mb-3">
+            <input
+              type="password"
+              class="form-control"
+              name="cnfPassword"
+              id="cnfPassword"
+              placeholder=""
+              [formControl]="cnfPassword"
+            />
+            <label for="password">Confirm password</label>
+
+            <div *ngIf="cnfPassword.touched && cnfPassword.invalid">
+              <div *ngIf="cnfPassword.hasError('passwordMismatch')">
+                <p class="alert alert-danger">
+                  Password and confirm password does not match
+                </p>
+              </div>
+            </div>
+          </div>
           <!-- buttons -->
 
           <div class="row">
