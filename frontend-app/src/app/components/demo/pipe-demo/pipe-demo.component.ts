@@ -19,6 +19,8 @@ export class PipeDemoComponent implements OnInit {
 
   isLoading = false;
 
+  pipeChaining = 'Hello world';
+
   promise = new Promise((resolve) => {
     this.isLoading = true;
     setTimeout(() => {

@@ -29,6 +29,7 @@
     *ngFor="let todo of todoCollection | filter : filteredValue"
     class="list-group-item mb-3"
   >
-    {{ todo.label | uppercase }} - {{ todo.status }}
+    {{ todo.label | uppercase }}
+    <span class="badge text-bg-primary float-end">{{ todo.status }} </span>
   </li>
 </ul>
