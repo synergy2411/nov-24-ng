@@ -1,0 +1,7 @@
+<h1>The Posts Component</h1>
+
+<ul>
+  <li *ngFor="let post of posts">
+    {{ post.title | uppercase }} - {{ post.body | uppercase }}
+  </li>
+</ul>

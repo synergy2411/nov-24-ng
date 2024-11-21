@@ -100,7 +100,8 @@ v2 -> v3
 
 - Immutable Change are Pure
 
-# npm install json-server@0.17.4 -g
+# To install and run json-server
 
+- npm install json-server@0.17.4 -g
 - json-server -version
 - json-server --watch data/db.json
