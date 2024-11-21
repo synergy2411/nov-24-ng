@@ -75,13 +75,13 @@ export class ObservableDemoComponent implements OnInit {
 
   ngOnInit(): void {
     // let subject = new ReplaySubject(2);
-    let subject = new AsyncSubject();
-    subject.next(101);
-    subject.subscribe((data) => console.log('Sub 1: ', data));
+    let subject = new BehaviorSubject(101);
     subject.next(102);
     subject.next(103);
-    subject.subscribe((data) => console.log('Subs 2 : ', data));
+    subject.subscribe((data) => console.log('Sub 1: ', data)); //102
     subject.next(104);
+    subject.next(105);
+    subject.subscribe((data) => console.log('Subs 2 : ', data)); //104
     subject.complete();
   }
   counter = 1;
