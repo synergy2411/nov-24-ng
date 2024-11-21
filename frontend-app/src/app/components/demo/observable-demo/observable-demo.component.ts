@@ -1,0 +1,94 @@
+import { Component, OnInit } from '@angular/core';
+import {
+  Observable,
+  Subscription,
+  interval,
+  take,
+  filter,
+  map,
+  Subject,
+  BehaviorSubject,
+  ReplaySubject,
+  AsyncSubject,
+} from 'rxjs';
+
+@Component({
+  selector: 'app-observable-demo',
+  templateUrl: './observable-demo.component.html',
+  styleUrls: ['./observable-demo.component.css'],
+})
+export class ObservableDemoComponent implements OnInit {
+  obs$ = new Observable((observer) => {
+    setTimeout(() => {
+      observer.next('First Package');
+    }, 1000);
+    setTimeout(() => {
+      observer.next('Second Package');
+    }, 1500);
+    setTimeout(() => {
+      observer.next('Third Package');
+    }, 3000);
+    setTimeout(() => {
+      observer.error(new Error('Something went wrong'));
+    }, 4000);
+    setTimeout(() => {
+      observer.next('Fourth Package');
+    }, 5000);
+    setTimeout(() => {
+      observer.complete();
+    }, 6000);
+  });
+
+  unSub$!: Subscription;
+
+  interval$ = interval(500);
+
+  onSubscribe() {
+    // this.interval$
+    //   .pipe(
+    //     take(5),
+    //     filter((value) => value % 2 === 0),
+    //     map((val) => val * 2)
+    //   )
+    //   .subscribe(
+    //     (data) => console.log(data),
+    //     (err) => console.error(err),
+    //     () => console.log('COMPLETED')
+    //   );
+    // this.unSub$ = this.obs$.subscribe({
+    //   next: (data) => {
+    //     console.log('DATA : ', data);
+    //   },
+    //   error: (err) => console.error(err),
+    //   complete: () => console.log('COMPLETED'),
+    // });
+  }
+
+  onUnsubscribe() {
+    this.unSub$.unsubscribe();
+  }
+
+  constructor() {}
+
+  // subject = new Subject();
+  // subject = new BehaviorSubject(101);
+
+  ngOnInit(): void {
+    // let subject = new ReplaySubject(2);
+    let subject = new AsyncSubject();
+    subject.next(101);
+    subject.subscribe((data) => console.log('Sub 1: ', data));
+    subject.next(102);
+    subject.next(103);
+    subject.subscribe((data) => console.log('Subs 2 : ', data));
+    subject.next(104);
+    subject.complete();
+  }
+  counter = 1;
+
+  onEmitEvent() {
+    // this.subject.next(this.counter);
+    // this.counter++;
+    // this.subject.subscribe((data) => console.log(`Subs ${this.counter}`, data));
+  }
+}

@@ -25,6 +25,7 @@ export class UsersComponent implements OnInit {
     alert(
       `Mr. ${item.lastName.toUpperCase()} is working with ${item.company}!`
     );
+    debugger;
   }
 
   onChildInput(value: string) {

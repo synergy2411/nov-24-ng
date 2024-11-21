@@ -15,6 +15,7 @@ import { FilterPipe } from './pipes/filter.pipe';
 import { LoginComponent } from './components/demo/auth/login/login.component';
 import { RegistrationComponent } from './components/demo/auth/registration/registration.component';
 import { DataService } from './services/data.service';
+import { ObservableDemoComponent } from './components/demo/observable-demo/observable-demo.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { DataService } from './services/data.service';
     FilterPipe,
     LoginComponent,
     RegistrationComponent,
+    ObservableDemoComponent,
   ],
   imports: [
     // Modules
