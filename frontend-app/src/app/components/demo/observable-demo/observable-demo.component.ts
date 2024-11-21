@@ -55,13 +55,13 @@ export class ObservableDemoComponent implements OnInit {
     //     (err) => console.error(err),
     //     () => console.log('COMPLETED')
     //   );
-    // this.unSub$ = this.obs$.subscribe({
-    //   next: (data) => {
-    //     console.log('DATA : ', data);
-    //   },
-    //   error: (err) => console.error(err),
-    //   complete: () => console.log('COMPLETED'),
-    // });
+    this.unSub$ = this.obs$.subscribe({
+      next: (data) => {
+        console.log('DATA : ', data);
+      },
+      error: (err) => console.error(err),
+      complete: () => console.log('COMPLETED'),
+    });
   }
 
   onUnsubscribe() {
@@ -70,25 +70,15 @@ export class ObservableDemoComponent implements OnInit {
 
   constructor() {}
 
-  // subject = new Subject();
-  // subject = new BehaviorSubject(101);
-
   ngOnInit(): void {
     // let subject = new ReplaySubject(2);
     let subject = new BehaviorSubject(101);
     subject.next(102);
-    subject.next(103);
     subject.subscribe((data) => console.log('Sub 1: ', data)); //102
+    subject.next(103);
     subject.next(104);
-    subject.next(105);
     subject.subscribe((data) => console.log('Subs 2 : ', data)); //104
+    subject.next(105);
     subject.complete();
-  }
-  counter = 1;
-
-  onEmitEvent() {
-    // this.subject.next(this.counter);
-    // this.counter++;
-    // this.subject.subscribe((data) => console.log(`Subs ${this.counter}`, data));
   }
 }
