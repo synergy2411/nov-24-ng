@@ -7,6 +7,7 @@ import {
   ValidationErrors,
   Validators,
 } from '@angular/forms';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-registration',
@@ -24,7 +25,7 @@ export class RegistrationComponent implements OnInit {
 
   registrationForm!: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private authService: AuthService) {
     this.registrationForm = this.fb.group({
       uname: this.username,
       pwd: this.password,
@@ -36,6 +37,10 @@ export class RegistrationComponent implements OnInit {
 
   onSubmit() {
     console.log(this.registrationForm.value);
+    this.authService.userSignUp(
+      this.registrationForm.value.uname,
+      this.registrationForm.value.pwd
+    );
   }
 
   hasExclamationMark(control: AbstractControl): ValidationErrors | null {
