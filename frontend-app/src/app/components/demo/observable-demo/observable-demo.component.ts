@@ -10,6 +10,7 @@ import {
   BehaviorSubject,
   ReplaySubject,
   AsyncSubject,
+  tap,
 } from 'rxjs';
 
 @Component({
@@ -48,6 +49,7 @@ export class ObservableDemoComponent implements OnInit {
     //   .pipe(
     //     take(5),
     //     filter((value) => value % 2 === 0),
+    //      tap(val => console.log(val))
     //     map((val) => val * 2)
     //   )
     //   .subscribe(
