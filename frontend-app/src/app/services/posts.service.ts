@@ -7,9 +7,19 @@ import { IPost } from '../model/post';
   providedIn: 'root',
 })
 export class PostsService {
+  private baseUrl = 'http://localhost:3000/posts';
+
   constructor(private http: HttpClient) {}
 
   getPosts(): Observable<Array<IPost>> {
-    return this.http.get<IPost[]>('http://localhost:3000/posts');
+    return this.http.get<IPost[]>(this.baseUrl);
+  }
+
+  createPost(post: { title: string; body: string }): Observable<IPost> {
+    return this.http.post<IPost>(this.baseUrl, post);
+  }
+
+  deletePost(postId: string) {
+    return this.http.delete(`${this.baseUrl}/${postId}`);
   }
 }

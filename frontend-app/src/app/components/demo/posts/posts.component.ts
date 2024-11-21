@@ -15,4 +15,14 @@ export class PostsComponent implements OnInit {
   ngOnInit(): void {
     this.postsService.getPosts().subscribe((posts) => (this.posts = posts));
   }
+
+  addPost() {
+    this.postsService
+      .createPost({ title: 'New Post', body: '....' })
+      .subscribe(console.log);
+  }
+
+  deletePost(postId: string) {
+    this.postsService.deletePost(postId).subscribe(console.log);
+  }
 }
