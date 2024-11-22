@@ -112,3 +112,5 @@ v2 -> v3
 - RouterModule - forChild / forRoot
 - RouterLink - create links (do not refresh page)
 - RouterOutlet - provides space to load component template
+- Router - navigate the user programmatically
+- CanActivate Gaurd

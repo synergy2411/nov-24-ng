@@ -3,11 +3,16 @@
     <div class="row">
       <div class="col-9">
         <ul class="nav nav-tabs">
-          <li class="nav-item">
+          <li class="nav-item" *ngIf="!authService.isAuthenticated()">
             <a class="nav-link" [routerLink]="['login']">Login</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="['register']">Register</a>
+            <a
+              class="nav-link"
+              *ngIf="!authService.isAuthenticated()"
+              [routerLink]="['register']"
+              >Register</a
+            >
           </li>
           <li class="nav-item">
             <a class="nav-link" [routerLink]="['pipes']">Pipes</a>
@@ -15,14 +20,19 @@
           <li class="nav-item">
             <a class="nav-link" [routerLink]="['observable']">Observable</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" *ngIf="authService.isAuthenticated()">
             <a class="nav-link" [routerLink]="['users']">Users</a>
           </li>
         </ul>
       </div>
       <div class="col-3">
-        <div class="d-grid">
-          <button class="btn btn-outline-danger">Logout</button>
+        <div class="d-grid" *ngIf="authService.isAuthenticated()">
+          <button
+            class="btn btn-outline-danger"
+            (click)="authService.onLogout()"
+          >
+            Logout
+          </button>
         </div>
       </div>
     </div>
