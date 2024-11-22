@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from './services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -10,4 +11,10 @@ export class AppComponent {
   title = 'frontend-app';
 
   toggle = true;
+
+  constructor(private authServie: AuthService) {}
+
+  isAuthenticated() {
+    return this.authServie.isAuthenticated();
+  }
 }
