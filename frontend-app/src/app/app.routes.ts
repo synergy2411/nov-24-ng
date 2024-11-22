@@ -8,6 +8,7 @@ import { LoginGuard } from './services/guard/login.guard';
 import { ProductComponent } from './components/product/product.component';
 import { OverviewComponent } from './components/product/overview/overview.component';
 import { SpecificationComponent } from './components/product/specification/specification.component';
+import { IAmLazyComponent } from './modules/lazy/components/i-am-lazy/i-am-lazy.component';
 
 // http://localhost:4200/login
 
@@ -27,6 +28,7 @@ export const APP_ROUTES: Routes = [
   },
   {
     path: 'lazy',
+    // component: IAmLazyComponent,
     loadChildren: () =>
       import('./modules/lazy/lazy.module').then((m) => m.LazyModule),
   },
