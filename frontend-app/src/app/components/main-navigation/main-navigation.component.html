@@ -1,21 +1,30 @@
-<header>
+<header class="p-3">
   <nav>
-    <ul class="nav nav-tabs">
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['login']">Login</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['register']">Register</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['pipes']">Pipes</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['observable']">Observable</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['users']">Users</a>
-      </li>
-    </ul>
+    <div class="row">
+      <div class="col-9">
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['login']">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['register']">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['pipes']">Pipes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['observable']">Observable</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['users']">Users</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-3">
+        <div class="d-grid">
+          <button class="btn btn-outline-danger">Logout</button>
+        </div>
+      </div>
+    </div>
   </nav>
 </header>
