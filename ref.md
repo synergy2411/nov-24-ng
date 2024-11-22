@@ -115,3 +115,5 @@ v2 -> v3
 - Router - navigate the user programmatically
 - CanActivate Gaurd
 - ActivatedRoute : access the url
+
+> ng test

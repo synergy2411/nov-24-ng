@@ -17,6 +17,7 @@ export class LoginComponent implements OnInit {
       loginForm.value.email,
       loginForm.value.password
     );
+    debugger;
     console.log(loginForm);
   }
 }
