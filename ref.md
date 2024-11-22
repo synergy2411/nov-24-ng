@@ -114,3 +114,4 @@ v2 -> v3
 - RouterOutlet - provides space to load component template
 - Router - navigate the user programmatically
 - CanActivate Gaurd
+- ActivatedRoute : access the url

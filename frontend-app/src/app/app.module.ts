@@ -21,6 +21,9 @@ import { ObservableDemoComponent } from './components/demo/observable-demo/obser
 import { PostsComponent } from './components/demo/posts/posts.component';
 import { APP_ROUTES } from './app.routes';
 import { MainNavigationComponent } from './components/main-navigation/main-navigation.component';
+import { ProductComponent } from './components/product/product.component';
+import { OverviewComponent } from './components/product/overview/overview.component';
+import { SpecificationComponent } from './components/product/specification/specification.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +43,9 @@ import { MainNavigationComponent } from './components/main-navigation/main-navig
     ObservableDemoComponent,
     PostsComponent,
     MainNavigationComponent,
+    ProductComponent,
+    OverviewComponent,
+    SpecificationComponent,
   ],
   imports: [
     // Modules

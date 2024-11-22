@@ -5,6 +5,9 @@ import { PipeDemoComponent } from './components/demo/pipe-demo/pipe-demo.compone
 import { ObservableDemoComponent } from './components/demo/observable-demo/observable-demo.component';
 import { UsersComponent } from './users/users.component';
 import { LoginGuard } from './services/guard/login.guard';
+import { ProductComponent } from './components/product/product.component';
+import { OverviewComponent } from './components/product/overview/overview.component';
+import { SpecificationComponent } from './components/product/specification/specification.component';
 
 // http://localhost:4200/login
 
@@ -14,6 +17,18 @@ export const APP_ROUTES: Routes = [
   { path: 'register', component: RegistrationComponent },
   { path: 'pipes', component: PipeDemoComponent },
   { path: 'observable', component: ObservableDemoComponent },
-  { path: 'users', component: UsersComponent, canActivate: [LoginGuard] },
+  {
+    path: 'products',
+    component: ProductComponent,
+    children: [
+      { path: ':name/:productId/overview', component: OverviewComponent },
+      { path: 'specification', component: SpecificationComponent },
+    ],
+  },
+  {
+    path: 'users',
+    component: UsersComponent,
+    canActivate: [LoginGuard],
+  },
   { path: '**', redirectTo: 'login', pathMatch: 'full' },
 ];
