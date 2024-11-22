@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users.component';
@@ -18,6 +19,8 @@ import { RegistrationComponent } from './components/demo/auth/registration/regis
 import { DataService } from './services/data.service';
 import { ObservableDemoComponent } from './components/demo/observable-demo/observable-demo.component';
 import { PostsComponent } from './components/demo/posts/posts.component';
+import { APP_ROUTES } from './app.routes';
+import { MainNavigationComponent } from './components/main-navigation/main-navigation.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +39,7 @@ import { PostsComponent } from './components/demo/posts/posts.component';
     RegistrationComponent,
     ObservableDemoComponent,
     PostsComponent,
+    MainNavigationComponent,
   ],
   imports: [
     // Modules
@@ -43,6 +47,7 @@ import { PostsComponent } from './components/demo/posts/posts.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    RouterModule.forRoot(APP_ROUTES),
   ],
   providers: [DataService], // Services
   bootstrap: [AppComponent],

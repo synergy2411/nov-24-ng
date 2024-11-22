@@ -105,3 +105,10 @@ v2 -> v3
 - npm install json-server@0.17.4 -g
 - json-server -version
 - json-server --watch data/db.json
+
+# Routing Terminologies
+
+- RouteConfig : Config for routes
+- RouterModule - forChild / forRoot
+- RouterLink - create links (do not refresh page)
+- RouterOutlet - provides space to load component template

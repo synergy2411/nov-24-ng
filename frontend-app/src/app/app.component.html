@@ -1,5 +1,9 @@
 <div class="container">
+  <app-main-navigation></app-main-navigation>
+  <br />
   <h1>Hello World!!</h1>
+
+  <router-outlet></router-outlet>
   <!-- <input type="text" [(ngModel)]="title" />
 
   <button (click)="toggle = !toggle">Toggle</button> -->
@@ -10,7 +14,7 @@
 
   <!-- <app-pipe-demo></app-pipe-demo> -->
 
-  <app-login *ngIf="!isAuthenticated()"></app-login>
+  <!-- <app-login *ngIf="!isAuthenticated()"></app-login> -->
 
   <!-- <app-registration></app-registration> -->
 
@@ -18,5 +22,5 @@
 
   <!-- <app-posts></app-posts> -->
 
-  <app-users *ngIf="isAuthenticated()"></app-users>
+  <!-- <app-users *ngIf="isAuthenticated()"></app-users> -->
 </div>
